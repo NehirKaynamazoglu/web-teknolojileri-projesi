@@ -16,5 +16,5 @@ Amaç, HTML, CSS, JavaScript, Bootstrap ve API kullanarak mobil uyumlu (responsi
 - Tüm stiller `style.css` dosyasında ayrı tutulacaktır
 
 ## Geliştirici
-**Ad Soyad:** Nehir Kaynamazoğlu 
+**Ad Soyad:** Nehir Kaynamazoğlu  
 **Öğrenci No:** B241210106
