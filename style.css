@@ -1,0 +1,115 @@
+/* GENEL AYARLAR */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f0f8;  /* Açık mor */
+  color: #3d0074;             /* Koyu mor yazılar */
+  margin: 0;
+  padding: 0;
+}
+
+/* BAŞLIKLAR */
+h1, h2 {
+  color: #5a189a; /* Mor başlıklar */
+}
+
+/* LİSTELER */
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+/* LİNKLER */
+a {
+  color: #7b2ff7;
+  text-decoration: none;
+}
+a:hover {
+  color: #9d4edd;
+  text-decoration: underline;
+}
+
+/* GÖRSELLER */
+img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #7b2ff7;
+  display: block;
+  margin: 0 auto;
+}
+
+/* NAVBAR */
+.navbar-dark.bg-dark {
+  background-color: #3d0074 !important;
+}
+
+/* KART STİLLERİ */
+.card {
+  box-shadow: 0 4px 8px rgba(123, 47, 247, 0.2);
+  border: 1px solid #7b2ff7;
+  border-radius: 10px;
+}
+
+/* BOŞLUKLAR */
+.container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
+.mt-4 {
+  margin-top: 1.5rem !important;
+}
+
+/* İKONLAR */
+.bi {
+  color: #7b2ff7;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* ALT BAŞLIK */
+header p.lead {
+  font-size: 1.25rem;
+  color: #6a3dad;
+}
+/* Tüm paragraf yazıları mor olsun */
+p, li {
+  color: #3d0074;
+}
+
+/* Küçük başlıklar (h5, h6 gibi) için de mor */
+h3, h4, h5, h6 {
+  color: #5a189a;
+}
+
+.navbar-brand img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%; /* Tam yuvarlak */
+}
+
+/* Navbar yüksekliğini artır */
+.navbar {
+  min-height: 60px; /* Varsayılan genelde 56px, biraz büyüttük */
+}
+
+/* Profil resmine ekstra boyut ve boşluk */
+.navbar-brand img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 12px; /* Yanındaki yazıyla arayı aç */
+}
+
+/* Navbar marka yazısını biraz daha kalın ve büyüt */
+.navbar-brand {
+  font-weight: 700; /* Bold */
+  font-size: 1.4rem; /* Yazı boyutu */
+  display: flex;
+  align-items: center;
+}
+
