@@ -1,24 +1,37 @@
-/* GENEL AYARLAR */
+/* ====================== */
+/* GENEL STİLLER (TÜM SAYFALAR) */
+/* ====================== */
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f0f8;  /* Açık mor */
+  background-color: #f4f0f8;  /* Açık mor zemin */
   color: #3d0074;             /* Koyu mor yazılar */
   margin: 0;
   padding: 0;
 }
 
-/* BAŞLIKLAR */
+/* Başlıklar (index.html, ozgecmis.html, sehrim.html ve diğerleri) */
 h1, h2 {
   color: #5a189a; /* Mor başlıklar */
 }
 
-/* LİSTELER */
+/* Küçük başlıklar (h3, h4, h5, h6) */
+h3, h4, h5, h6 {
+  color: #5a189a;
+}
+
+/* Paragraflar ve liste elemanları */
+p, li {
+  color: #3d0074;
+}
+
+/* Listeler (index.html, ozgecmis.html) */
 ul {
   list-style-type: square;
   padding-left: 20px;
 }
 
-/* LİNKLER */
+/* Linkler (index.html, ozgecmis.html, sehrim.html) */
 a {
   color: #7b2ff7;
   text-decoration: none;
@@ -28,33 +41,78 @@ a:hover {
   text-decoration: underline;
 }
 
-/* GÖRSELLER */
-img {
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  border: 2px solid #7b2ff7;
-  display: block;
-  margin: 0 auto;
+/* İkonlar (index.html ve genel) */
+.bi {
+  color: #7b2ff7;
+  vertical-align: middle;
+  margin-right: 8px;
 }
 
-/* NAVBAR */
+/* ====================== */
+/* NAVBAR STİLLERİ (TÜM SAYFALAR) */
+/* ====================== */
+
 .navbar-dark.bg-dark {
-  background-color: #3d0074 !important;
+  background-color: #3d0074 !important; /* Koyu mor navbar */
 }
 
-/* KART STİLLERİ */
+.navbar-brand img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%; /* Tam yuvarlak */
+  margin-right: 12px; /* Yazıyla arası */
+}
+
+.navbar-brand {
+  font-weight: 700; /* Kalın */
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  min-height: 60px; /* Navbar yüksekliği arttırıldı */
+}
+
+/* Navbar linkleri */
+.navbar-dark .navbar-nav .nav-link {
+  color: #d1b3ff; /* Açık mor */
+  font-weight: 600;
+}
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #9d4edd; /* Parlak mor */
+  text-decoration: underline;
+}
+
+/* ====================== */
+/* KART STİLLERİ (index.html, ozgecmis.html, sehrim.html) */
+/* ====================== */
+
 .card {
+  background-color: #f4f0f8; /* Açık mor-pembe ton */
   box-shadow: 0 4px 8px rgba(123, 47, 247, 0.2);
-  border: 1px solid #7b2ff7;
-  border-radius: 10px;
+  border: 2px solid #7b2ff7; /* Mor sınır */
+  border-radius: 12px;
+  transition: transform 0.2s ease;
 }
 
-/* BOŞLUKLAR */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(123, 47, 247, 0.4);
+}
+
+.card h2 {
+  margin-bottom: 15px;
+}
+
+/* Boşluklar */
 .container {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
 .mb-3 {
   margin-bottom: 1rem !important;
 }
@@ -62,54 +120,77 @@ img {
   margin-top: 1.5rem !important;
 }
 
-/* İKONLAR */
-.bi {
-  color: #7b2ff7;
-  vertical-align: middle;
-  margin-right: 8px;
+/* ====================== */
+/* SLIDER STİLLERİ (sehrim.html) */
+/* ====================== */
+
+.slider-image {
+  height: 450px;              /* Resim yüksekliği */
+  object-fit: contain;        /* Kırpmadan göster */
+  border-radius: 10px;
+  border: 3px solid #7b2ff7; /* Mor sınır */
+  cursor: pointer;
 }
 
-/* ALT BAŞLIK */
+/* Slider okları */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #7b2ff7;  /* Mor arka plan */
+  border-radius: 50%;
+  padding: 15px;
+}
+
+/* ====================== */
+/* HEADER ALT BAŞLIK (index.html) */
+/* ====================== */
+
 header p.lead {
   font-size: 1.25rem;
-  color: #6a3dad;
-}
-/* Tüm paragraf yazıları mor olsun */
-p, li {
-  color: #3d0074;
+  color: #6a3dad; /* Mor alt başlık */
 }
 
-/* Küçük başlıklar (h5, h6 gibi) için de mor */
-h3, h4, h5, h6 {
-  color: #5a189a;
+/* Sayfa kaydırma davranışı */
+html {
+  scroll-behavior: smooth;
 }
 
-.navbar-brand img {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  border-radius: 50%; /* Tam yuvarlak */
+/* Gizlenmiş içerik kartları */
+.icerik-kart {
+  display: none;
 }
 
-/* Navbar yüksekliğini artır */
-.navbar {
-  min-height: 60px; /* Varsayılan genelde 56px, biraz büyüttük */
+/* Slider resimleri */
+.slider-image {
+  height: 450px;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 3px solid #7b2ff7;
+  cursor: pointer;
 }
 
-/* Profil resmine ekstra boyut ve boşluk */
-.navbar-brand img {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
+/* Slider kontrol okları (mor renkli) */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #7b2ff7;
   border-radius: 50%;
-  margin-right: 12px; /* Yanındaki yazıyla arayı aç */
+  padding: 15px;
 }
 
-/* Navbar marka yazısını biraz daha kalın ve büyüt */
-.navbar-brand {
-  font-weight: 700; /* Bold */
-  font-size: 1.4rem; /* Yazı boyutu */
-  display: flex;
-  align-items: center;
+/* Mirasımız butonu (sehrim sayfasındaki link için, istersen genel de kullanabilirsin) */
+.btn-outline-primary {
+  border-color: #7b2ff7;
+  color: #7b2ff7;
 }
 
+.btn-outline-primary:hover {
+  background-color: #7b2ff7;
+  color: #fff;
+}
+
+/* Mirasımız sayfasındaki görsel için */
+.miras-img {
+  max-width: 100%;
+  border-radius: 12px;
+  border: 3px solid #7b2ff7;
+  margin-bottom: 20px;
+}
