@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Şehrim - Nehir Kaynamazoğlu</title>
+
+  <!-- Stil Dosyası -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
+      <img src="images/logo.jpg" alt="Profil Fotoğrafı" class="me-2 rounded-circle" />
+      Nehir'in Sitesi
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Hakkımda</a></li>
+        <li class="nav-item"><a class="nav-link" href="ozgecmis.html">Özgeçmiş</a></li>
+        <li class="nav-item"><a class="nav-link active" href="sehrim.html">Şehrim</a></li>
+        <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Ankara Hakkında Bilgiler -->
+<div class="container mt-4">
+  <div class="card mb-4 p-4">
+    <h2 class="text-center">🗺️ ANKARA</h2>
+    <p>
+      Ankara, Türkiye’nin başkenti ve İç Anadolu Bölgesi’nin kalbinde yer alır. Yaklaşık 5.7 milyon nüfusu ile ülkenin en büyük ikinci şehridir.
+      Siyasi, kültürel ve tarihi açıdan çok zengin bir merkezdir. Şehirde kışlar genellikle soğuk ve kar yağışlı, yazlar ise sıcak ve kurak geçer.
+      Ankara’nın simgeleri arasında Anıtkabir, Atakule, Ankara Kalesi ve Etnografya Müzesi bulunur. Ayrıca geniş parkları, müzeleri ve canlı sosyal yaşamıyla
+      hem resmi hem de genç nüfus için tercih edilen bir şehirdir.
+    </p>
+
+     <!-- Mirasımız Linki -->
+     <div class="text-center mt-4">
+        <a href="mirasimiz.html" class="btn btn-outline-primary fw-bold" style="border-color: #7b2ff7; color: #7b2ff7;">
+          Mirasımız Sayfasına Git →
+        </a>
+      </div>
+  </div>
+</div>
+
+<!-- Slider -->
+<div id="sehirSlider" class="carousel slide mt-4 mb-5 container" data-bs-ride="carousel">
+  <div class="carousel-inner rounded shadow">
+    <div class="carousel-item active">
+      <img src="images/anitkabir.jpg" class="d-block w-100 slider-image" alt="Anıtkabir" onclick="goster('anitkabir')">
+    </div>
+    <div class="carousel-item">
+      <img src="images/atakule.jpg" class="d-block w-100 slider-image" alt="Atakule" onclick="goster('atakule')">
+    </div>
+    <div class="carousel-item">
+      <img src="images/ankarakalesi.jpg" class="d-block w-100 slider-image" alt="Ankara Kalesi" onclick="goster('ankaralesi')">
+    </div>
+    <div class="carousel-item">
+      <img src="images/etnografyamuzesi.jpg" class="d-block w-100 slider-image" alt="Etnografya Müzesi" onclick="goster('etnografya')">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#sehirSlider" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#sehirSlider" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<!-- İçerik Kartları -->
+<div class="container">
+  <div id="anitkabir" class="card mb-4 p-3 icerik-kart">
+    <h2> Anıtkabir</h2>
+    <p>Atatürk'ün anıt mezarı. Hem mimarisi hem anlamıyla mutlaka görülmesi gereken bir yer.</p>
+  </div>
+
+  <div id="atakule" class="card mb-4 p-3 icerik-kart">
+    <h2> Atakule</h2>
+    <p>Ankara’nın en bilinen yapılarından biri. Yüksek kulesinden şehrin harika manzarasını izleyebilirsiniz.</p>
+  </div>
+
+  <div id="ankaralesi" class="card mb-4 p-3 icerik-kart">
+    <h2> Ankara Kalesi</h2>
+    <p>Tarih kokan sokakları ve tarihi yapılarıyla fotoğrafçılar için ideal bir mekan.</p>
+  </div>
+
+  <div id="etnografya" class="card mb-4 p-3 icerik-kart">
+    <h2> Etnografya Müzesi</h2>
+    <p>Türk kültürünü yansıtan etkileyici eserlerin sergilendiği sakin ve huzurlu bir müze.</p>
+  </div>
+</div>
+
+<!-- JS: İçeriği Göster -->
+<script>
+  function goster(id) {
+    document.querySelectorAll('.icerik-kart').forEach(function(kart) {
+      kart.style.display = 'none';
+    });
+    document.getElementById(id).style.display = 'block';
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
