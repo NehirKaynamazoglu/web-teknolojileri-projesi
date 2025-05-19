@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>İletişim</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body class="iletisim-sayfasi">
+  <div id="app">
+    <h2>İletişim Formu</h2>
+    <form name="iletisimForm" method="POST" action="formsonuc.php" @submit="vueKontrol">
+
+      <label>Ad Soyad:</label>
+      <input type="text" v-model="adsoyad" name="adsoyad">
+
+      <label>E-posta:</label>
+      <input type="text" v-model="email" name="email">
+
+      <label>Telefon:</label>
+      <input type="text" v-model="telefon" name="telefon">
+
+      <label>Cinsiyet:</label>
+      <div class="gender-group">
+        <label><input type="radio" v-model="cinsiyet" name="cinsiyet" value="Erkek"> Erkek</label>
+        <label><input type="radio" v-model="cinsiyet" name="cinsiyet" value="Kadın"> Kadın</label>
+      </div>
+
+      <label>Şehir:</label>
+      <select v-model="sehir" name="sehir">
+        <option value="">Seçiniz</option>
+        <option v-for="il in iller" :value="il">{{ il }}</option>
+      </select>
+
+      <label>Mesaj (İsteğe bağlı):</label>
+      <textarea v-model="mesaj" name="mesaj"></textarea>
+
+      <div class="button-group">
+        <button type="submit">Gönder</button>
+        <button type="reset">Temizle</button>
+      </div>
+
+    </form>
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        adsoyad: '',
+        email: '',
+        telefon: '',
+        cinsiyet: '',
+        sehir: '',
+        mesaj: '',
+        iller: [
+          "Adana","Adıyaman","Afyonkarahisar","Ağrı","Amasya","Ankara","Antalya","Artvin","Aydın",
+          "Balıkesir","Bilecik","Bingöl","Bitlis","Bolu","Burdur","Bursa","Çanakkale","Çankırı",
+          "Çorum","Denizli","Diyarbakır","Edirne","Elazığ","Erzincan","Erzurum","Eskişehir","Gaziantep",
+          "Giresun","Gümüşhane","Hakkari","Hatay","Isparta","Mersin","İstanbul","İzmir","Kars","Kastamonu",
+          "Kayseri","Kırklareli","Kırşehir","Kocaeli","Konya","Kütahya","Malatya","Manisa","Kahramanmaraş",
+          "Mardin","Muğla","Muş","Nevşehir","Niğde","Ordu","Rize","Sakarya","Samsun","Siirt","Sinop",
+          "Sivas","Tekirdağ","Tokat","Trabzon","Tunceli","Şanlıurfa","Uşak","Van","Yozgat","Zonguldak",
+          "Aksaray","Bayburt","Karaman","Kırıkkale","Batman","Şırnak","Bartın","Ardahan","Iğdır",
+          "Yalova","Karabük","Kilis","Osmaniye","Düzce"
+        ]
+      },
+      methods: {
+        vueKontrol: function (event) {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          const telefonRegex = /^[0-9]+$/;
+
+          if (
+            this.adsoyad === '' || this.email === '' || this.telefon === '' ||
+            this.cinsiyet === '' || this.sehir === ''
+          ) {
+            alert("Lütfen zorunlu alanları doldurun.");
+            event.preventDefault();
+            return;
+          }
+
+          if (!emailRegex.test(this.email)) {
+            alert("Geçerli bir e-posta giriniz.");
+            event.preventDefault();
+            return;
+          }
+
+          if (!telefonRegex.test(this.telefon)) {
+            alert("Telefon sadece rakamlardan oluşmalıdır.");
+            event.preventDefault();
+            return;
+          }
+
+          // Mesaj alanı isteğe bağlı olduğu için kontrol edilmez
+        }
+      }
+    });
+  </script>
+</body>
+</html>
