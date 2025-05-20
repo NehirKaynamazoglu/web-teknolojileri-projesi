@@ -22,18 +22,16 @@ if ($kullanici === $dogruKullanici && $sifre === $dogruSifre) {
     </head>
     <body>
         <div class='container mt-5 text-center'>
-            <h2 class='text-success'>Hoşgeldiniz, <strong>$sifre</strong></h2>
+            <h2 class='text-success'>Hoşgeldiniz, <strong>$kullanici</strong></h2>
             <p class='mt-3'>Başarıyla giriş yaptınız.</p>
-            <a href='index.html' class='btn btn-primary mt-3'>Siteye Git</a>
+            <button class='btn btn-primary mt-3' onclick=\"window.location.href='index.html'\">Siteye Git</button>
         </div>
     </body>
     </html>
     ";
 } else {
-    // Giriş başarısızsa login sayfasına geri yönlendir
-    header("Location: login.html");
+    // Giriş başarısızsa login sayfasına hata mesajıyla geri yönlendir
+    header("Location: login.html?hata=1");
     exit();
 }
 ?>
-
-
