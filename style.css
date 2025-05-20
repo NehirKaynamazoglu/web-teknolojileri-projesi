@@ -2,39 +2,32 @@
 /* GENEL STİLLER (TÜM SAYFALAR) */
 /* ====================== */
 
-/* Sayfa genelinde kullanılan yazı tipi ve arka plan rengi */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #ffffff; /* Beyaz arka plan */
-  color: #000080; /* Lacivert metin rengi */
+  background-color: #ffffff;
+  color: #000080;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  min-height: 100vh; /* Sayfa yüksekliği minimum ekran yüksekliği kadar */
 }
 
-/* Başlıkların rengi */
-h1, h2, h3, h4, h5, h6 {
-  color: #000080; /* Lacivert */
-}
-
-/* Paragraf ve liste öğelerinin rengi */
+h1, h2, h3, h4, h5, h6,
 p, li {
-  color: #000080; /* Lacivert */
+  color: #000080;
 }
 
-/* Liste stil ve iç boşluğu */
 ul {
   list-style-type: square;
   padding-left: 20px;
 }
 
-/* Bağlantıların varsayılan ve üzerine gelindiğindeki renkleri */
 a {
-  color: #0000ff; /* Canlı mavi */
+  color: #0000ff;
   text-decoration: none;
 }
+
 a:hover {
-  color: #000080; /* Lacivert */
+  color: #000080;
   text-decoration: underline;
 }
 
@@ -42,17 +35,15 @@ a:hover {
 /* NAVBAR STİLLERİ */
 /* ====================== */
 
-/* Navigasyon çubuğunun arka plan rengi */
 .navbar-dark.bg-dark {
-  background-color: #000080 !important; /* Lacivert */
+  background-color: #000080 !important;
 }
 
-/* Navbar marka (logo ve isim) stil ayarları */
 .navbar-brand img {
   width: 50px;
   height: 50px;
-  object-fit: cover;
-  border-radius: 50%;
+  object-fit: cover; /* Görseli kırpma, kutuya sığdır */
+  border-radius: 50%; /* Yuvarlak hale getir */
   margin-right: 12px;
 }
 
@@ -63,20 +54,18 @@ a:hover {
   align-items: center;
 }
 
-/* Navbar yüksekliği */
 .navbar {
   min-height: 60px;
 }
 
-/* Navbar bağlantılarının renkleri ve üzerine gelinceki stilleri */
 .navbar-dark .navbar-nav .nav-link {
-  color: #ffffff; /* Beyaz */
+  color: #ffffff;
   font-weight: 600;
 }
 
 .navbar-dark .navbar-nav .nav-link.active,
 .navbar-dark .navbar-nav .nav-link:hover {
-  color: #add8e6; /* Açık mavi */
+  color: #add8e6;
   text-decoration: underline;
 }
 
@@ -84,32 +73,28 @@ a:hover {
 /* KART STİLLERİ */
 /* ====================== */
 
-/* Kartların arka planı, metin rengi ve gölgeleri */
 .card {
-  background-color: #f0f8ff; /* AliceBlue */
-  color: #000080; /* Lacivert */
+  background-color: #f0f8ff;
+  color: #000080;
   border: none;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 128, 0.2);
-  transition: transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 128, 0.2); /* Hafif gölge */
+  transition: transform 0.2s ease; /* Hover geçiş efekti */
 }
 
-/* Kart üzerine gelindiğinde hafif yukarı hareket ve gölge artışı */
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 128, 0.3);
 }
 
-/* Kart başlıklarının alt boşluğu */
 .card h2 {
   margin-bottom: 15px;
 }
 
-/* Kart içindeki resimlerin yüksekliği ve yerleşimi */
 .card-img-top {
   width: 100%;
   height: 250px;
-  object-fit: contain;
+  object-fit: contain; /* Görseli bozmadan kutuya sığdır */
   border-radius: 12px 12px 0 0;
   background-color: #fff;
 }
@@ -118,9 +103,8 @@ a:hover {
 /* BUTONLAR */
 /* ====================== */
 
-/* Mor buton stili */
 .btn-purple {
-  background-color: #0000ff; /* Canlı mavi */
+  background-color: #0000ff;
   color: white;
   border: none;
   padding: 8px 16px;
@@ -129,22 +113,18 @@ a:hover {
   transition: background-color 0.3s ease;
 }
 
-/* Mor buton üzerine gelindiğindeki stil */
 .btn-purple:hover {
-  background-color: #000080; /* Lacivert */
-  color: white;
+  background-color: #000080;
   cursor: pointer;
 }
 
-/* Ana hatlı birincil buton stili */
 .btn-outline-primary {
-  border-color: #0000ff; /* Canlı mavi */
-  color: #0000ff; /* Canlı mavi */
+  border-color: #0000ff;
+  color: #0000ff;
 }
 
-/* Ana hatlı birincil buton üzerine gelindiğindeki stil */
 .btn-outline-primary:hover {
-  background-color: #0000ff; /* Canlı mavi */
+  background-color: #0000ff;
   color: white;
 }
 
@@ -152,19 +132,17 @@ a:hover {
 /* SLIDER & GÖRSELLER */
 /* ====================== */
 
-/* Slider içindeki resimlerin yüksekliği ve yerleşimi */
 .slider-image {
   height: 450px;
   object-fit: contain;
   border-radius: 10px;
-  border: 3px solid #0000ff; /* Canlı mavi */
+  border: 3px solid #0000ff;
   cursor: pointer;
 }
 
-/* Slider kontrol ikonlarının arka planı ve şekli */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: #0000ff; /* Canlı mavi */
+  background-color: #0000ff;
   border-radius: 50%;
   padding: 15px;
 }
@@ -173,13 +151,11 @@ a:hover {
 /* ÖZEL BÖLÜMLER */
 /* ====================== */
 
-/* Konteynerin üst ve alt boşlukları */
 .container {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-/* Margin ayarları */
 .mb-3 {
   margin-bottom: 1rem !important;
 }
@@ -188,17 +164,15 @@ a:hover {
   margin-top: 1.5rem !important;
 }
 
-/* Başlık altındaki açıklama metni stili */
 header p.lead {
   font-size: 1.25rem;
-  color: #000080; /* Lacivert */
+  color: #000080;
 }
 
-/* Miras resimlerinin boyutu ve kenarları */
 .miras-img {
   max-width: 100%;
   border-radius: 12px;
-  border: 3px solid #0000ff; /* Canlı mavi */
+  border: 3px solid #0000ff;
   margin-bottom: 20px;
 }
 
@@ -206,7 +180,6 @@ header p.lead {
 /* FİLM LİSTESİ */
 /* ====================== */
 
-/* Film kartlarının yerleşimi ve boşlukları */
 #filmler {
   display: flex;
   flex-wrap: wrap;
@@ -215,14 +188,13 @@ header p.lead {
   padding: 20px;
 }
 
-/* Film kartlarının stili */
 .film-karti {
   width: 300px;
-  border: 2px solid #0000ff; /* Canlı mavi */
+  border: 2px solid #0000ff;
   border-radius: 10px;
   padding: 15px;
-  background-color: #f0f8ff; /* AliceBlue */
-  color: #000080; /* Lacivert */
+  background-color: #f0f8ff;
+  color: #000080;
   box-shadow: 0 0 10px rgba(0, 0, 128, 0.2);
 }
 
@@ -230,16 +202,14 @@ header p.lead {
 /* GİZLENEN İÇERİK KARTLARI */
 /* ====================== */
 
-/* İçerik kartlarının varsayılan olarak gizlenmesi */
 .icerik-kart {
-  display: none;
+  display: none; /* Başlangıçta gizli içerik kartları */
 }
 
 /* ====================== */
 /* LOGIN SAYFASI STİLLERİ */
 /* ====================== */
 
-/* Renk değişkenleri */
 :root {
   --blue-dark: #000080;
   --blue: #0000ff;
@@ -312,6 +282,7 @@ header p.lead {
 .btn-purple {
   background-color: var(--purple-dark);
 }
+
 .btn-purple:hover {
   background-color: var(--purple-darker);
 }
@@ -320,6 +291,7 @@ header p.lead {
   border-color: var(--purple-dark);
   color: var(--purple-dark);
 }
+
 .btn-outline-primary:hover {
   background-color: var(--purple-dark);
   color: white;
@@ -328,6 +300,7 @@ header p.lead {
 a {
   color: var(--purple-dark);
 }
+
 a:hover {
   color: var(--purple-darker);
 }
@@ -335,37 +308,39 @@ a:hover {
 .card {
   box-shadow: 0 4px 8px rgba(26, 35, 126, 0.2);
 }
+
 .card:hover {
   box-shadow: 0 8px 16px rgba(26, 35, 126, 0.3);
 }
 
 /* ====================== */
-/* FORM GENEL STİLLERİ - Sadece iletişim sayfası */
+/* FORM GENEL STİLLERİ - İLETİŞİM SAYFASI */
 /* ====================== */
 
 body.iletisim-sayfasi {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 20px;
-  background-color: #ffffff; /* Beyaz arka plan */
-  color: #000080; /* Lacivert */
+  background-color: #ffffff;
+  color: #000080;
   min-height: 100vh;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 
 body.iletisim-sayfasi #app {
   width: 100%;
   max-width: 600px;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Padding ve border dahil genişlik hesaplaması */
+  margin: 0 auto; /* Yatay ortalama */
 }
 
 body.iletisim-sayfasi form {
-  background-color: #f0f8ff; /* AliceBlue */
+  background-color: #f0f8ff;
   padding: 30px 40px;
-  border: 1px solid #0000ff; /* Canlı mavi sınır */
+  border: 1px solid #0000ff;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 128, 0.2);
   box-sizing: border-box;
@@ -373,92 +348,63 @@ body.iletisim-sayfasi form {
 
 body.iletisim-sayfasi h2 {
   color: #000080;
-  margin-bottom: 20px;
-  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 
 body.iletisim-sayfasi label {
+  font-weight: 600;
   display: block;
-  margin-top: 15px;
-  font-weight: 600;
+  margin-bottom: 5px;
   color: #000080;
 }
 
-/* Cinsiyet radio butonlarını yan yana hizalamak için container */
-body.iletisim-sayfasi .gender-group {
-  display: flex;
-  gap: 30px;
-  margin-top: 8px;
-}
-
-body.iletisim-sayfasi .gender-group input[type="radio"] {
-  margin-right: 8px;
-  transform: scale(1.1);
-  cursor: pointer;
-}
-
-body.iletisim-sayfasi .gender-group label {
-  display: flex;
-  align-items: center;
-  font-weight: 600;
-  color: #000080;
-  cursor: pointer;
-}
-
-/* Formdaki input, select ve textarea */
-body.iletisim-sayfasi input[type="text"],
-body.iletisim-sayfasi select,
-body.iletisim-sayfasi textarea {
+body.iletisim-sayfasi input,
+body.iletisim-sayfasi textarea,
+body.iletisim-sayfasi select {
   width: 100%;
-  padding: 8px;
-  margin-top: 6px;
+  padding: 10px;
+  margin-bottom: 15px;
   border: 2px solid #0000ff;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 1rem;
-  outline: none;
-  transition: border-color 0.3s ease;
-  color: #000080;
-  background-color: #ffffff;
   box-sizing: border-box;
 }
 
-body.iletisim-sayfasi input[type="text"]:focus,
-body.iletisim-sayfasi select:focus,
-body.iletisim-sayfasi textarea:focus {
+body.iletisim-sayfasi input:focus,
+body.iletisim-sayfasi textarea:focus,
+body.iletisim-sayfasi select:focus {
+  outline: none;
   border-color: #000080;
   box-shadow: 0 0 5px rgba(0, 0, 128, 0.3);
 }
 
 body.iletisim-sayfasi button {
-  margin-top: 20px;
-  padding: 10px 16px;
   background-color: #0000ff;
   color: white;
+  padding: 12px 20px;
   border: none;
-  border-radius: 6px;
-  font-weight: bold;
+  border-radius: 10px;
+  font-weight: 700;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: 48%;
-  box-sizing: border-box;
 }
 
 body.iletisim-sayfasi button:hover {
   background-color: #000080;
 }
 
-body.iletisim-sayfasi button[type="reset"] {
-  background-color: #dc3545;
+body.iletisim-sayfasi .form-check.form-check-inline {
+  display: inline-flex;      /* satır içi flex, yan yana düzgün durur */
+  align-items: center;       /* dikey ortala */
+  margin-right: 15px;        /* araya boşluk */
 }
 
-body.iletisim-sayfasi button[type="reset"]:hover {
-  background-color: #a71d2a;
+body.iletisim-sayfasi .form-check-input {
+  margin-top: 0;             /* yukarı kaydırma */
+  margin-right: 6px;         /* label ile arada boşluk */
+  width: 1.25em;             /* biraz daha büyük ve standart boyut */
+  height: 1.25em;
+  border-radius: 50%;        /* yuvarlak yap */
 }
 
-/* Butonları yan yana yapmak için buton container */
-body.iletisim-sayfasi .button-group {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  margin-top: 20px;
-}
