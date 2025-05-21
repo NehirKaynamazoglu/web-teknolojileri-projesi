@@ -3,32 +3,32 @@
 /* ====================== */
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #ffffff;
-  color: #000080;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh; /* Sayfa yüksekliği minimum ekran yüksekliği kadar */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Yazı tipi ayarlanır */
+  background-color: #ffffff; /* Arka plan rengi */
+  color: #000080; /* Metin rengi */
+  margin: 0; /* Dış boşluk sıfırlanır */
+  padding: 0; /* İç boşluk sıfırlanır */
+  min-height: 100vh; /* Sayfa yüksekliği ekran kadar olur */
 }
 
 h1, h2, h3, h4, h5, h6,
 p, li {
-  color: #000080;
+  color: #000080; /* Başlık, paragraf ve liste öğeleri lacivert olur */
 }
 
 ul {
-  list-style-type: square;
-  padding-left: 20px;
+  list-style-type: disc; /* Liste işareti yuvarlak yapılır */
+  padding-left: 20px; /* Soldan boşluk verilir */
 }
 
 a {
-  color: #0000ff;
-  text-decoration: none;
+  color: #0000ff; /* Bağlantılar mavi olur */
+  text-decoration: none; /* Altı çizgisi kaldırılır */
 }
 
 a:hover {
-  color: #000080;
-  text-decoration: underline;
+  color: #000080; /* Üzerine gelince lacivert olur */
+  text-decoration: underline; /* Üzerine gelince altı çizilir */
 }
 
 /* ====================== */
@@ -36,67 +36,68 @@ a:hover {
 /* ====================== */
 
 .navbar-dark.bg-dark {
-  background-color: #000080 !important;
+  background-color: #000080 !important; /* Navbar arka planı lacivert yapılır (öncelikli) */
 }
 
 .navbar-brand img {
-  width: 50px;
-  height: 50px;
-  object-fit: cover; /* Görseli kırpma, kutuya sığdır */
-  border-radius: 50%; /* Yuvarlak hale getir */
-  margin-right: 12px;
+  width: 50px; 
+  height: 50px; 
+  object-fit: cover; /* Görsel kutuya tam sığar */
+  border-radius: 50%; /* Görsel yuvarlak hale gelir */
+  margin-right: 12px; /* Sağındaki yazıya boşluk bırakır */
 }
 
 .navbar-brand {
-  font-weight: 700;
-  font-size: 1.4rem;
-  display: flex;
-  align-items: center;
+  font-weight: 700; /* Kalın yazı */
+  font-size: 1.4rem; /* Yazı boyutu */
+  display: flex; /* Esnek kutu modeli kullanılır */
+  align-items: center; /* Dikey hizalama ortalanır */
 }
 
 .navbar {
-  min-height: 60px;
+  min-height: 60px; /* Navbar yüksekliği minimum 60px olur */
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: #ffffff;
-  font-weight: 600;
+  color: #ffffff; /* Menü linkleri beyaz olur */
+  font-weight: 600; /* Yarı kalın yazı */
 }
 
 .navbar-dark .navbar-nav .nav-link.active,
 .navbar-dark .navbar-nav .nav-link:hover {
-  color: #add8e6;
-  text-decoration: underline;
+  color: #add8e6; /* Aktif veya üzerine gelinen link açık mavi olur */
+  text-decoration: underline; /* Altı çizilir */
 }
+
 
 /* ====================== */
 /* KART STİLLERİ */
 /* ====================== */
 
 .card {
-  background-color: #f0f8ff;
-  color: #000080;
-  border: none;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 128, 0.2); /* Hafif gölge */
-  transition: transform 0.2s ease; /* Hover geçiş efekti */
+  background-color: #f0f8ff; 
+  color: #000080; 
+  border: none; /* Kenarlık yok */
+  border-radius: 12px; /* Kenarlar yuvarlatılır */
+  box-shadow: 0 4px 8px rgba(0, 0, 128, 0.2); /* Hafif gölge efekti */
+  transition: transform 0.2s ease; /* Hover geçiş animasyonu */
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 128, 0.3);
+  transform: translateY(-5px); /* Üzerine gelince kart biraz yukarı çıkar */
+  box-shadow: 0 8px 16px rgba(0, 0, 128, 0.3); /* Gölgeler büyür, efekt artar */
 }
 
 .card h2 {
-  margin-bottom: 15px;
+  margin-bottom: 15px; /* Başlık altına boşluk eklenir */
 }
 
 .card-img-top {
-  width: 100%;
-  height: 250px;
-  object-fit: contain; /* Görseli bozmadan kutuya sığdır */
-  border-radius: 12px 12px 0 0;
-  background-color: #fff;
+  width: 100%; /* Görsel genişliği %100 olur */
+  height: 250px; /* Sabit yükseklik */
+  object-fit: contain; /* Görsel oranı bozulmadan kutuya sığdırılır */
+  border-radius: 12px 12px 0 0; /* Sadece üst kenarlar yuvarlatılır */
+  background-color: #fff; 
 }
 
 /* ====================== */
@@ -104,28 +105,28 @@ a:hover {
 /* ====================== */
 
 .btn-purple {
-  background-color: #0000ff;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  font-weight: bold;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
+  background-color: #0000ff; /* Düğme arka planı mavi */
+  color: white; /* Yazı rengi beyaz */
+  border: none; /* Kenarlık yok */
+  padding: 8px 16px; /* İç boşluk (yukarı-aşağı 8px, sağ-sol 16px) */
+  font-weight: bold; /* Yazı kalın */
+  border-radius: 6px; /* Kenarlar yuvarlatılır */
+  transition: background-color 0.3s ease; /* Arka plan değişimi yumuşak geçer */
 }
 
 .btn-purple:hover {
-  background-color: #000080;
-  cursor: pointer;
+  background-color: #000080; /* Üzerine gelince lacivert olur */
+  cursor: pointer; /* Fare ikonu el şekline dönüşür */
 }
 
 .btn-outline-primary {
-  border-color: #0000ff;
-  color: #0000ff;
+  border-color: #0000ff; /* Kenarlık rengi mavi */
+  color: #0000ff; /* Yazı rengi mavi */
 }
 
 .btn-outline-primary:hover {
-  background-color: #0000ff;
-  color: white;
+  background-color: #0000ff; /* Üzerine gelince arka plan mavi olur */
+  color: white; /* Yazı beyaz olur */
 }
 
 /* ====================== */
@@ -133,69 +134,55 @@ a:hover {
 /* ====================== */
 
 .slider-image {
-  height: 450px;
-  object-fit: contain;
-  border-radius: 10px;
-  border: 3px solid #0000ff;
-  cursor: pointer;
+  height: 450px; /* Görsel yüksekliği sabit */
+  object-fit: contain; /* Görsel bozulmadan sığar */
+  border-radius: 10px; /* Köşeler yuvarlatılır */
+  border: 3px solid #0000ff; /* Mavi kenarlık */
+  cursor: pointer; /* Üzerine gelince fare ikonu el olur */
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: #0000ff;
-  border-radius: 50%;
-  padding: 15px;
+  background-color: #0000ff; /* Slider kontrol okları mavi */
+  border-radius: 50%; /* Yuvarlak şekil */
+  padding: 15px; /* İç boşluk (ikon boyutu büyür) */
 }
 
 /* ====================== */
 /* ÖZEL BÖLÜMLER */
 /* ====================== */
 
+.etkinlik-img {
+  width: 100%;
+  height: 250px; /* sabit yükseklik */
+  object-fit: cover; /* resimleri kırparak düzgün hizalar */
+  object-position: center;
+}
+
+
 .container {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 20px;       /* Üst boşluk */
+  padding-bottom: 20px;    /* Alt boşluk */
 }
 
 .mb-3 {
-  margin-bottom: 1rem !important;
+  margin-bottom: 1rem !important; /* Alt boşluk (Bootstrap sınıfı) */
 }
 
 .mt-4 {
-  margin-top: 1.5rem !important;
+  margin-top: 1.5rem !important;  /* Üst boşluk (Bootstrap sınıfı) */
 }
 
 header p.lead {
-  font-size: 1.25rem;
-  color: #000080;
+  font-size: 1.25rem; /* Yazı boyutu büyütülür */
+  color: #000080;        
 }
 
 .miras-img {
-  max-width: 100%;
-  border-radius: 12px;
-  border: 3px solid #0000ff;
-  margin-bottom: 20px;
-}
-
-/* ====================== */
-/* FİLM LİSTESİ */
-/* ====================== */
-
-#filmler {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  padding: 20px;
-}
-
-.film-karti {
-  width: 300px;
-  border: 2px solid #0000ff;
-  border-radius: 10px;
-  padding: 15px;
-  background-color: #f0f8ff;
-  color: #000080;
-  box-shadow: 0 0 10px rgba(0, 0, 128, 0.2);
+  max-width: 100%; /* Görselin genişliği taşmaz */
+  border-radius: 12px; /* Köşeler yuvarlatılır */
+  border: 3px solid #0000ff; /* Mavi kenarlık */
+  margin-bottom: 20px; /* Alt boşluk */
 }
 
 /* ====================== */
@@ -203,7 +190,7 @@ header p.lead {
 /* ====================== */
 
 .icerik-kart {
-  display: none; /* Başlangıçta gizli içerik kartları */
+  display: none; /* Kartlar varsayılan olarak gizli */
 }
 
 /* ====================== */
@@ -211,106 +198,106 @@ header p.lead {
 /* ====================== */
 
 :root {
-  --blue-dark: #000080;
-  --blue: #0000ff;
-  --alice-blue: #f0f8ff;
-  --purple-dark: #1a237e;
-  --purple-darker: #0d1b5f;
-  --red-error: red;
+  --blue-dark: #000080;       
+  --blue: #0000ff;          
+  --alice-blue: #f0f8ff;     
+  --purple-dark: #1a237e;    
+  --purple-darker: #0d1b5f;  
+  --red-error: red;           
 }
 
 .login-container {
-  max-width: 400px;
-  margin: 80px auto;
-  padding: 30px;
-  background-color: var(--alice-blue);
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 128, 0.2);
+  max-width: 400px;            
+  margin: 80px auto; /* Sayfanın ortasına yerleştirme */
+  padding: 30px; /* İç boşluk */
+  background-color: var(--alice-blue); 
+  border-radius: 12px; /* Köşeler yuvarlatılır */
+  box-shadow: 0 0 15px rgba(0, 0, 128, 0.2); /* Hafif gölge */
 }
 
 .login-container h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: var(--blue-dark);
+  text-align: center; /* Ortalanmış başlık */
+  margin-bottom: 20px; /* Alt boşluk */
+  color: var(--blue-dark);        
 }
 
 .login-form label {
-  font-weight: bold;
-  color: var(--blue-dark);
+  font-weight: bold; /* Kalın etiket */
+  color: var(--blue-dark);       
 }
 
 .login-form input[type="email"],
 .login-form input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 2px solid var(--blue);
-  border-radius: 6px;
-  font-size: 1rem;
-  outline: none;
+  width: 100%;                 
+  padding: 10px; /* İç boşluk */
+  margin-bottom: 15px; /* Alt boşluk */
+  border: 2px solid var(--blue);/* Mavi kenarlık */
+  border-radius: 6px; /* Köşeler yuvarlatılır */
+  font-size: 1rem; /* Standart yazı boyutu */
+  outline: none; /* Tıklanınca mavi çerçeve çıkmaz */
 }
 
 .login-form input[type="email"]:focus,
 .login-form input[type="password"]:focus {
-  border-color: var(--blue-dark);
-  box-shadow: 0 0 5px rgba(0, 0, 128, 0.3);
+  border-color: var(--blue-dark);                 
+  box-shadow: 0 0 5px rgba(0, 0, 128, 0.3); /* Hafif gölge efekti */
 }
 
 .login-form button {
-  width: 100%;
-  background-color: var(--blue);
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  width: 100%;                 
+  background-color: var(--blue); 
+  color: white;                   
+  border: none; /* Kenar çizgisi yok */
+  padding: 10px; /* İç boşluk */
+  border-radius: 6px; /* Köşeler yuvarlatılır */
+  font-weight: bold; /* Yazı kalın */
+  transition: background-color 0.3s ease; /* Geçiş efekti */
 }
 
 .login-form button:hover {
-  background-color: var(--blue-dark);
+  background-color: var(--blue-dark); /* Üzerine gelince lacivert */
 }
 
 /* Hata mesajları */
 .error-message {
-  color: var(--red-error);
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-  text-align: center;
+  color: var(--red-error);         
+  font-size: 0.9rem; /* Küçük yazı */
+  margin-bottom: 10px;/* Alt boşluk */
+  text-align: center; /* Ortalı yazı */
 }
 
+/* Mor tonlarda buton */
 .btn-purple {
-  background-color: var(--purple-dark);
-}
+  background-color: var(--purple-dark); 
 
 .btn-purple:hover {
-  background-color: var(--purple-darker);
+  background-color: var(--purple-darker); 
 }
 
+/* Mor çerçeveli buton */
 .btn-outline-primary {
-  border-color: var(--purple-dark);
-  color: var(--purple-dark);
+  border-color: var(--purple-dark);  
+  color: var(--purple-dark);        
 }
 
 .btn-outline-primary:hover {
-  background-color: var(--purple-dark);
-  color: white;
-}
+  background-color: var(--purple-dark); 
+  color: white;                         
 
+/* Bağlantılar */
 a {
-  color: var(--purple-dark);
-}
+  color: var(--purple-dark);       
 
 a:hover {
-  color: var(--purple-darker);
-}
+  color: var(--purple-darker);     
 
+/* Kart gölgeleri */
 .card {
-  box-shadow: 0 4px 8px rgba(26, 35, 126, 0.2);
+  box-shadow: 0 4px 8px rgba(26, 35, 126, 0.2); /* Hafif gölge */
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px rgba(26, 35, 126, 0.3);
+  box-shadow: 0 8px 16px rgba(26, 35, 126, 0.3); /* Daha belirgin gölge */
 }
 
 /* ====================== */
@@ -321,90 +308,85 @@ body.iletisim-sayfasi {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 20px;
-  background-color: #ffffff;
-  color: #000080;
-  min-height: 100vh;
-
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
+  background-color: #ffffff;     
+  color: #000080;               
+  min-height: 100vh; /* Tam ekran yüksekliği */
 }
 
 body.iletisim-sayfasi #app {
-  width: 100%;
-  max-width: 600px;
-  box-sizing: border-box; /* Padding ve border dahil genişlik hesaplaması */
-  margin: 0 auto; /* Yatay ortalama */
+  width: 100%; /* Tam genişlik */
+  max-width: 600px; /* Maksimum genişlik */
+  box-sizing: border-box; /* Padding ve border dahil genişlik */
+  margin: 0 auto; /* Ortalanmış */
 }
 
 body.iletisim-sayfasi form {
-  background-color: #f0f8ff;
-  padding: 30px 40px;
-  border: 1px solid #0000ff;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 128, 0.2);
+  background-color: #f0f8ff;    
+  padding: 30px 40px; /* İç boşluk */
+  border: 1px solid #0000ff; 
+  border-radius: 12px; /* Yuvarlatılmış köşeler */
+  box-shadow: 0 4px 8px rgba(0, 0, 128, 0.2); /* Hafif gölge */
   box-sizing: border-box;
 }
 
 body.iletisim-sayfasi h2 {
-  color: #000080;
-  margin-bottom: 15px;
-  font-weight: 600;
+  color: #000080;              
+  margin-bottom: 15px; /* Alt boşluk */
+  font-weight: 600;/* Yarı kalın yazı */
 }
 
 body.iletisim-sayfasi label {
-  font-weight: 600;
-  display: block;
-  margin-bottom: 5px;
-  color: #000080;
+  font-weight: 600; /* Kalın etiket */
+  display: block; /* Yeni satırdan başlatır */
+  margin-bottom: 5px; /* Alt boşluk */
+  color: #000080;              
 }
 
 body.iletisim-sayfasi input,
 body.iletisim-sayfasi textarea,
 body.iletisim-sayfasi select {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 2px solid #0000ff;
-  border-radius: 8px;
-  font-size: 1rem;
+  width: 100%; /* Tam genişlik */
+  padding: 10px; /* İç boşluk */
+  margin-bottom: 15px; /* Alt boşluk */
+  border: 2px solid #0000ff;    
+  border-radius: 8px;/* Yuvarlatılmış köşe */
+  font-size: 1rem;            
   box-sizing: border-box;
 }
 
 body.iletisim-sayfasi input:focus,
 body.iletisim-sayfasi textarea:focus,
 body.iletisim-sayfasi select:focus {
-  outline: none;
-  border-color: #000080;
-  box-shadow: 0 0 5px rgba(0, 0, 128, 0.3);
+  outline: none; /* Mavi çerçeve yok */
+  border-color: #000080;                       
+  box-shadow: 0 0 5px rgba(0, 0, 128, 0.3); /* Hafif  gölge */
 }
 
 body.iletisim-sayfasi button {
-  background-color: #0000ff;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 10px;
-  font-weight: 700;
-  cursor: pointer;
+  background-color: #0000ff;     
+  color: white;                  
+  padding: 12px 20px; /* İç boşluk */
+  border: none; /* Kenarlık yok */
+  border-radius: 10px; /* Yuvarlak kenarlar */
+  font-weight: 700; /* Kalın yazı */
+  cursor: pointer; /* El ikonu */
   transition: background-color 0.3s ease;
 }
 
 body.iletisim-sayfasi button:hover {
-  background-color: #000080;
+  background-color: #000080;    
 }
 
 body.iletisim-sayfasi .form-check.form-check-inline {
-  display: inline-flex;      /* satır içi flex, yan yana düzgün durur */
-  align-items: center;       /* dikey ortala */
-  margin-right: 15px;        /* araya boşluk */
+  display: inline-flex; /* Satır içi kutular */
+  align-items: center; /* Dikey ortalama */
+  margin-right: 15px; /* Sağ boşluk */
 }
 
 body.iletisim-sayfasi .form-check-input {
-  margin-top: 0;             /* yukarı kaydırma */
-  margin-right: 6px;         /* label ile arada boşluk */
-  width: 1.25em;             /* biraz daha büyük ve standart boyut */
+  margin-top: 0; /* Yukarı taşma yok */
+  margin-right: 6px; /* Etiketle arası boşluk */
+  width: 1.25em; /* Boyut belirleme */
   height: 1.25em;
-  border-radius: 50%;        /* yuvarlak yap */
+  border-radius: 50%; /* Radyo butonları yuvarlak */
 }
-
