@@ -4,28 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Giriş Sayfası</title>
+  <!-- Stil dosyası ve Bootstrap CSS dosyası sayfaya bağlanıyor -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
   <script>
+    // Form gönderilmeden önce inputları kontrol eden JavaScript fonksiyonu
     function formKontrol(e) {
-      var email = document.getElementById("email").value.trim();
-      var sifre = document.getElementById("sifre").value.trim();
-      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      var email = document.getElementById("email").value.trim();   // Email inputundaki değer
+      var sifre = document.getElementById("sifre").value.trim();   // Şifre inputundaki değer
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;               // Basit email doğrulama regex ifadesi
 
-      var hataAlani = document.getElementById("error");
+      var hataAlani = document.getElementById("error");             // Hata mesajının gösterileceği alan
 
+      // Email veya şifre boşsa hata mesajı göster ve form gönderimini engelle
       if (email === "" || sifre === "") {
         hataAlani.textContent = "Kullanıcı adı ve şifre boş bırakılamaz.";
-        e.preventDefault();
+        e.preventDefault();  // Formun gönderilmesini durdur
         return false;
       }
 
+      // Email formatı geçerli değilse hata mesajı göster ve form gönderimini engelle
       if (!emailRegex.test(email)) {
         hataAlani.textContent = "Lütfen geçerli bir e-posta adresi giriniz.";
-        e.preventDefault();
+        e.preventDefault();  // Formun gönderilmesini durdur
         return false;
       }
 
+      // Hata yoksa hata mesajını temizle ve formun gönderilmesine izin ver
       hataAlani.textContent = "";
       return true;
     }
@@ -37,21 +43,29 @@
     <div class="login-container">
       <h2 class="mb-3">Giriş Yap</h2>
 
+      <!-- Giriş formu: POST yöntemiyle kontrol.php dosyasına gönderilir -->
+      <!-- onsubmit ile formKontrol fonksiyonu çalıştırılır -->
       <form class="login-form" action="kontrol.php" method="POST" onsubmit="formKontrol(event)">
+        
+        <!-- Email alanı -->
         <label for="email">Kullanıcı Adı (E-posta):</label>
-        <input type="email" id="email" name="email" class="form-control mb-2" placeholder="b241210106@sakarya.edu.tr" required>
+        <input type="email" id="email" name="email" class="form-control mb-2" placeholder="b181285463@sakarya.edu.tr" required>
 
+        <!-- Şifre alanı -->
         <label for="sifre">Şifre:</label>
         <input type="password" id="sifre" name="sifre" class="form-control mb-2" placeholder="Şifreniz" required>
 
+        <!-- Hata mesajlarının gösterileceği alan -->
         <div id="error" class="text-danger mb-2">
           <?php
+          // Eğer URL'de hata parametresi varsa ve 1 ise ekranda hata mesajı göster
           if (isset($_GET["hata"]) && $_GET["hata"] == 1) {
               echo "Kullanıcı adı veya şifre hatalı.";
           }
           ?>
         </div>
 
+        <!-- Gönder butonu -->
         <button type="submit" class="btn btn-primary">Giriş Yap</button>
       </form>
     </div>

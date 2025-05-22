@@ -5,26 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>İletişim - Nehir Kaynamazoğlu</title>
 
-  <!-- Stil Dosyası -->
+  <!-- Stil Dosyası: Kendi CSS dosyan -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap CSS: Hazır tasarım kütüphanesi -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   
-  <!-- Vue.js -->
+  <!-- Vue.js: Form doğrulama ve etkileşim için JavaScript framework -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 </head>
 <body class="iletisim-sayfasi">
 
+  <!-- Navigasyon Menüsü -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
+      <!-- Site logosu ve ismi -->
       <a class="navbar-brand d-flex align-items-center fw-bold" href="index.html">
         <img src="images/logo.jpg" alt="Logo" width="40" height="40" class="me-2 rounded-circle">
         Nehir'in Sitesi
       </a>
+      <!-- Mobil görünüm için menü butonu -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <!-- Menü bağlantıları -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Hakkımda</a></li>
@@ -37,39 +41,42 @@
     </div>
   </nav>
 
- 
-  <!-- FORM ALANI -->
-  
+  <!-- Vue.js Uygulama Alanı -->
   <div id="app" class="container mt-5">
+    <!-- Sayfa başlığı -->
     <h2 class="mb-4 text-center">İletişim Formu</h2>
 
-    <!-- Başarı Mesajı -->
+    <!-- Başarı mesajı: Form başarıyla gönderilince gösterilecek -->
     <div v-if="basariMesaji" class="alert alert-success text-center">
       Form başarıyla gönderildi!
     </div>
 
-    <!-- Form -->
+    <!-- İletişim formu -->
     <form name="iletisimForm"
           method="POST"
           action="formsonuc.php"
-          @submit.prevent="vueKontrol"
+          @submit.prevent="vueKontrol" <!-- Form gönderimini Vue.js metoduyla kontrol et -->
           class="card p-4 shadow-sm">
 
+      <!-- Ad Soyad alanı -->
       <div class="mb-3">
         <label class="form-label">Ad Soyad:</label>
         <input type="text" v-model="adsoyad" name="adsoyad" class="form-control">
       </div>
 
+      <!-- E-posta alanı -->
       <div class="mb-3">
         <label class="form-label">E-posta:</label>
         <input type="email" v-model="email" name="email" class="form-control">
       </div>
 
+      <!-- Telefon alanı -->
       <div class="mb-3">
         <label class="form-label">Telefon:</label>
         <input type="text" v-model="telefon" name="telefon" class="form-control">
       </div>
 
+      <!-- Cinsiyet seçimi (Radio buttonlar) -->
       <div class="mb-3">
         <label class="form-label">Cinsiyet:</label><br>
         <div class="form-check form-check-inline">
@@ -84,19 +91,23 @@
         </div>
       </div>
 
+      <!-- Şehir seçimi -->
       <div class="mb-3">
         <label class="form-label">Şehir:</label>
         <select v-model="sehir" name="sehir" class="form-select">
           <option value="">Seçiniz</option>
+          <!-- İller listesinden seçenekler oluşturuluyor -->
           <option v-for="il in iller" :key="il" :value="il">{{ il }}</option>
         </select>
       </div>
 
+      <!-- Mesaj alanı (opsiyonel) -->
       <div class="mb-3">
         <label class="form-label">Mesaj (İsteğe bağlı):</label>
         <textarea v-model="mesaj" name="mesaj" class="form-control" rows="4"></textarea>
       </div>
 
+      <!-- Gönder ve Temizle butonları -->
       <div class="d-flex justify-content-center gap-2">
         <button type="submit" class="btn btn-primary">Gönder</button>
         <button type="reset" class="btn btn-secondary" @click="basariMesaji = false">Temizle</button>
@@ -104,22 +115,22 @@
     </form>
   </div>
 
-  <!-- Bootstrap JS -->
+  <!-- Bootstrap JS: etkileşim için -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Vue.js Script -->
+  <!-- Vue.js Script: Form doğrulama ve gönderim işlemleri -->
   <script>
     new Vue({
-      el: '#app',
+      el: '#app', // Vue uygulamasının bağlı olduğu element
       data: {
-        adsoyad: '',
-        email: '',
-        telefon: '',
-        cinsiyet: '',
-        sehir: '',
-        mesaj: '',
-        basariMesaji: false,
-        iller: [
+        adsoyad: '',       // Ad Soyad inputu
+        email: '',         // E-posta inputu
+        telefon: '',       // Telefon inputu
+        cinsiyet: '',      // Cinsiyet seçimi
+        sehir: '',         // Şehir seçimi
+        mesaj: '',         // Mesaj alanı
+        basariMesaji: false, // Başarı mesajının gösterilip gösterilmemesi
+        iller: [           // Türkiye'deki iller listesi
           "Adana","Adıyaman","Afyonkarahisar","Ağrı","Amasya","Ankara","Antalya","Artvin","Aydın",
           "Balıkesir","Bilecik","Bingöl","Bitlis","Bolu","Burdur","Bursa","Çanakkale","Çankırı",
           "Çorum","Denizli","Diyarbakır","Edirne","Elazığ","Erzincan","Erzurum","Eskişehir","Gaziantep",
@@ -132,25 +143,33 @@
         ]
       },
       methods: {
+        // Form gönderiminden önce doğrulama yapan fonksiyon
         vueKontrol() {
-          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          const telefonRegex = /^[0-9]+$/;
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;  // E-posta format kontrolü
+          const telefonRegex = /^[0-9]+$/;                  // Telefon numarası sadece rakamlar
 
+          // Zorunlu alanların boş olup olmadığını kontrol et
           if (!this.adsoyad || !this.email || !this.telefon || !this.cinsiyet || !this.sehir) {
             alert("Lütfen zorunlu alanları doldurun.");
             return;
           }
+
+          // E-posta formatı doğru mu kontrol et
           if (!emailRegex.test(this.email)) {
             alert("Geçerli bir e-posta giriniz.");
             return;
           }
+
+          // Telefon sadece rakamlardan oluşmalı
           if (!telefonRegex.test(this.telefon)) {
             alert("Telefon sadece rakamlardan oluşmalıdır.");
             return;
           }
 
-          // Başarı mesajını göster, sonra formu gerçek olarak gönder
+          // Eğer tüm kontroller geçerse başarı mesajını göster
           this.basariMesaji = true;
+
+          // Başarı mesajını gösterdikten sonra formu gerçek olarak gönder
           this.$nextTick(() => {
             this.$el.querySelector('form').submit();
           });

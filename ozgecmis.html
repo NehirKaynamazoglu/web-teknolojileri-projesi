@@ -5,45 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Özgeçmiş - Nehir Kaynamazoğlu</title>
 
-  <!-- Stil Dosyası -->
+  <!-- Stil Dosyasını Bağlama -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Bootstrap -->
+  <!-- Bootstrap CSS Bağlantısı -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- Navigasyon Menüsü -->
+  <!-- Navigasyon Menüsü Başlangıcı -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
+      <!-- Logo ve Site Adı -->
       <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
         <img src="images/logo.jpg" alt="Profil Fotoğrafı" class="me-2 rounded-circle" />
         Nehir'in Sitesi
       </a>
       
+      <!-- Küçük ekranlarda menü açma butonu -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      <!-- Menü bağlantıları -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Hakkımda</a></li>
           <li class="nav-item"><a class="nav-link active" href="ozgecmis.html">Özgeçmiş</a></li>
           <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+          <li class="nav-item"><a class="nav-link" href="ilgialanlarim.html">İlgi Alanlarım</a></li>
           <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
         </ul>
       </div>
     </div>
   </nav>
+  <!-- Navigasyon Menüsü Bitişi -->
 
-  <!-- İçerik -->
+  <!-- Sayfa Ana İçeriği -->
   <div class="container mt-5">
 
+    <!-- Sayfa Başlığı ve Alt Başlık -->
     <header class="text-center mb-5">
       <h1>Özgeçmiş</h1>
       <p class="lead">Eğitim geçmişim, becerilerim ve hedeflerim</p>
     </header>
 
-    <!-- Eğitim Kartı -->
+    <!-- Eğitim Bilgileri Kartı -->
     <div class="card mb-4 p-3">
       <h2>Eğitim</h2>
       <article>
@@ -56,7 +63,7 @@
       </article>
     </div>
 
-    <!-- Beceriler Kartı -->
+    <!-- Teknik ve Yazılım Becerileri Kartı -->
     <div class="card mb-4 p-3">
       <h2>Yazılım ve Teknik Beceriler</h2>
       <ul>
@@ -77,15 +84,16 @@
       </p>
     </div>
 
-    <!-- Etkinlikler Kartı -->
+    <!-- Katıldığın Etkinlikler Kartı -->
     <div class="card mb-4 p-3">
       <h2>Katıldığım Etkinlikler</h2>
       <p>Üniversitemin düzenlemiş olduğu çeşitli seminer ve etkinliklere katılım sağladım.</p>
     </div>
 
   </div>
+  <!-- Sayfa Ana İçeriği Bitişi -->
 
-  <!-- Bootstrap JS -->
+  <!-- Bootstrap JavaScript Bundle (Menü gibi bileşenlerin çalışması için) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

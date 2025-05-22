@@ -5,24 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Şehrim - Nehir Kaynamazoğlu</title>
 
-  <!-- Stil Dosyası -->
+  <!-- Stil Dosyasını Bağlama -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap CSS Bağlantısı -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
 
-<!-- Navbar -->
+<!-- Navbar (Üst Menü) -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
+    <!-- Logo ve Site Adı -->
     <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
       <img src="images/logo.jpg" alt="Profil Fotoğrafı" class="me-2 rounded-circle" />
       Nehir'in Sitesi
     </a>
+
+    <!-- Küçük ekranlarda menüyü açan buton -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
+
+    <!-- Menü bağlantıları -->
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Hakkımda</a></li>
@@ -33,8 +38,9 @@
     </div>
   </div>
 </nav>
+<!-- Navbar Bitişi -->
 
-<!-- Ankara Hakkında Bilgiler -->
+<!-- Ankara Hakkında Genel Bilgiler -->
 <div class="container mt-4">
   <div class="card mb-4 p-4">
     <h2 class="text-center">🗺️ ANKARA</h2>
@@ -45,21 +51,23 @@
       hem resmi hem de genç nüfus için tercih edilen bir şehirdir.
     </p>
 
-     <!-- Mirasımız Linki -->
-     <div class="text-center mt-4">
-        <a href="mirasimiz.html" class="btn btn-outline-primary fw-bold" style="border-color: #7b2ff7; color: #7b2ff7;">
-          Mirasımız Sayfasına Git →
-        </a>
-      </div>
+    <!-- Mirasımız Sayfasına Yönlendiren Buton -->
+    <div class="text-center mt-4">
+      <a href="mirasimiz.html" class="btn btn-outline-primary fw-bold" style="border-color: #7b2ff7; color: #7b2ff7;">
+        Mirasımız Sayfasına Git →
+      </a>
+    </div>
   </div>
 </div>
 
-<!-- Slider -->
+<!-- Görseller için Slider (Otomatik Kaydırmalı Galeri) -->
 <div id="sehirSlider" class="carousel slide mt-4 mb-5 container" data-bs-ride="carousel">
   <div class="carousel-inner rounded shadow">
+    <!-- İlk görsel, aktif olan -->
     <div class="carousel-item active">
       <img src="images/anitkabir.jpg" class="d-block w-100 slider-image" alt="Anıtkabir" onclick="goster('anitkabir')">
     </div>
+    <!-- Diğer görseller -->
     <div class="carousel-item">
       <img src="images/atakule.jpg" class="d-block w-100 slider-image" alt="Atakule" onclick="goster('atakule')">
     </div>
@@ -70,6 +78,8 @@
       <img src="images/etnografyamuzesi.jpg" class="d-block w-100 slider-image" alt="Etnografya Müzesi" onclick="goster('etnografya')">
     </div>
   </div>
+  
+  <!-- Slider kontrol butonları -->
   <button class="carousel-control-prev" type="button" data-bs-target="#sehirSlider" data-bs-slide="prev">
     <span class="carousel-control-prev-icon"></span>
   </button>
@@ -78,7 +88,7 @@
   </button>
 </div>
 
-<!-- İçerik Kartları -->
+<!-- Sliderda tıklanan görselin detayını gösteren içerik kartları -->
 <div class="container">
   <div id="anitkabir" class="card mb-4 p-3 icerik-kart">
     <h2> Anıtkabir</h2>
@@ -101,18 +111,21 @@
   </div>
 </div>
 
-<!-- JS: İçeriği Göster -->
+<!-- JavaScript: Sliderdaki görsele tıklandığında ilgili içeriği gösterme fonksiyonu -->
 <script>
   function goster(id) {
+    // Tüm içerik kartlarını gizle
     document.querySelectorAll('.icerik-kart').forEach(function(kart) {
       kart.style.display = 'none';
     });
+    // Seçilen içeriği göster
     document.getElementById(id).style.display = 'block';
+    // Seçilen içeriğe yumuşak kaydırma yap
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
   }
 </script>
 
-<!-- Bootstrap JS -->
+<!-- Bootstrap JavaScript Bundle (dropdown, carousel vb. için) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

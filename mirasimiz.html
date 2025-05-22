@@ -5,43 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mirasımız - Nehir Kaynamazoğlu</title>
 
+  <!-- Harici stil dosyasını dahil eder -->
   <link rel="stylesheet" href="style.css" />
+  <!-- Bootstrap kütüphanesinin CSS dosyasını dahil eder -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
 
-<!-- Navbar -->
+<!-- Navbar: Sayfanın üst kısmında gezinme menüsü -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
+    <!-- Marka kısmı: Profil fotoğrafı ve site ismi -->
     <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
       <img src="images/logo.jpg" alt="Profil Fotoğrafı" class="me-2 rounded-circle" />
       Nehir'in Sitesi
     </a>
+    <!-- Mobilde menüyü açıp kapatmak için buton -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <!-- Menü öğeleri: Sayfa linkleri -->
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Hakkımda</a></li>
         <li class="nav-item"><a class="nav-link" href="ozgecmis.html">Özgeçmiş</a></li>
         <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
-        <li class="nav-item"><a class="nav-link active" href="mirasimiz.html">Mirasımız</a></li>
+        <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
         <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- İçerik -->
+<!-- Ana içerik alanı: Sayfa içeriği buraya yerleştirilir -->
 <div class="container mt-5 mb-5">
 
+  <!-- Başlık ve giriş metni -->
   <header class="text-center mb-5">
     <h1>Mirasımız: Anıtkabir</h1>
     <p class="lead">Türkiye Cumhuriyeti'nin kurucusu Mustafa Kemal Atatürk’ün anıt mezarı olan Anıtkabir, hem ulusal bir sembol hem de kültürel mirasımızdır.</p>
   </header>
 
+  <!-- Anıtkabir görseli -->
   <img src="images/anitkabir.jpg" alt="Anıtkabir" class="miras-img mx-auto d-block" />
 
+  <!-- Anıtkabir hakkında detaylı bilgiler -->
   <article class="mt-4">
     <p>
        <strong>Konum:</strong> Anıtkabir, Ankara'nın Çankaya ilçesinde yer alır. Şehir merkezine yakın konumuyla her yıl milyonlarca kişi tarafından ziyaret edilmektedir.
@@ -63,7 +71,7 @@
 
 </div>
 
-<!-- Bootstrap JS -->
+<!-- Bootstrap JavaScript dosyasını dahil eder; sayfa etkileşimleri için gerekli -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
